@@ -1,0 +1,95 @@
+* {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--color-blanco);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-negro: #1D1D1D;
+    --color-gris: #676767;
+    --color-blanco: #FFFFFF;
+    --color-naranja: #FF6600;
+}
+
+body {
+    background-color: var(--color-negro);
+    overflow-x: hidden;
+}
+
+/* SECCIÓN 1 - HERO */
+
+    #seccion-hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: yellowgreen; */
+        padding: 0 20px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #seccion-hero img {
+        width: 100vw;
+        height: 27vh;
+        object-fit: cover;
+        display: block;
+    }
+
+    #seccion-hero h1 {
+        font-weight: 800;
+        font-size:x-large;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #seccion-hero button {
+        font-weight: 700;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0px;
+        width: 90vw;
+    }
+
+    #seccion-hero #boton-info button {
+        background-color: var(--color-naranja);
+        margin-bottom: 15px;
+    }
+
+    #seccion-hero #boton-testride button {
+        background-color: var(--color-negro);
+        border: 1px;
+        border-style: solid;
+        border-color: var(--color-blanco);
+        margin-bottom: 30px;
+    }
+
+    #seccion-hero .bloque-precio {
+        /* background-color: yellowgreen; */
+        padding-left: 15px;
+        border-left: 5px solid var(--color-naranja);
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+
+    #seccion-hero .bloque-precio #texto-precio {
+        font-size: small;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    #seccion-hero .bloque-precio #numero-precio {
+        font-weight: 700;
+    }
+
+    #seccion-hero #texto-aclaracion {
+        color: var(--color-gris);
+        font-size:smaller;
+        font-weight: 300;
+        align-self: flex-start;
+    }

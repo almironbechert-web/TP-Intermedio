@@ -123,6 +123,32 @@ body {
             object-fit: cover;
             margin-top: 50px;
             margin-bottom: 25px;
+            transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        #seccion-tarjeta img.salida-izquierda {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        #seccion-tarjeta img.salida-derecha {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        /* --- POSICIONAMIENTO INSTANTÁNEO PARA LA ENTRADA --- */
+        #seccion-tarjeta img.entrada-desde-derecha {
+            transition: none; /* Sin animación para que se posicione a la derecha al instante */
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        #seccion-tarjeta img.entrada-desde-izquierda {
+            transition: none; /* Sin animación para que se posicione a la izquierda al instante */
+            transform: translateX(-50px);
+            opacity: 0;
         }
 
         #seccion-tarjeta .indicadores-carrusel {
@@ -136,7 +162,7 @@ body {
             width: 12px;
             background-color: var(--color-blanco);
             border-radius: 100px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         #seccion-tarjeta .indicadores-carrusel .indicador-activo {

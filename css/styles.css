@@ -12,7 +12,7 @@
     --color-negro: #1D1D1D;
     --color-negro-1:#242424;
     --color-gris: #676767;
-    --color-gris-1:#3A3A3A;
+    --color-gris-1:#3f3f3f;
     --color-blanco: #FFFFFF;
     --color-naranja: #FF6600;
 }
@@ -118,9 +118,11 @@ body {
         }
 
         #tarjeta-colores .contenedor-imagen img {
-            width: 80vw;
+            width: 90vw;
             /* height: 23vh; */
             object-fit: cover;
+            margin-top: 50px;
+            margin-bottom: 25px;
         }
 
         #seccion-tarjeta .indicadores-carrusel {

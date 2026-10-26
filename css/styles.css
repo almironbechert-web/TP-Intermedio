@@ -1,3 +1,10 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 * {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
@@ -213,4 +220,110 @@ body {
         #tarjeta-colores .descripcion-moto {
             text-align: center;
             line-height: 1.6;
+        }
+
+/* SECCIÓN 3 - KTM POWER PARTS (GALERÍA) */
+        #seccion-powerparts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            color: var(--color-blanco);
+            text-align: center;
+        }
+
+        #tarjeta-powerparts {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        #seccion-powerparts h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- LA CAJA BLANCA CONTENEDORA --- */
+        #seccion-powerparts .contenedor-imagen {
+            background-color: var(--color-blanco); /* Fondo blanco pedido */
+            width: 100%;
+            max-width: 300px; /* Ancho máximo de la caja */
+            height: 300px; /* Alto fijo para mantener formato cuadrado perfecto */
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px; /* Margen interno para que la pieza no pegue contra los bordes */
+            border-radius: 8px; /* Bordes sutilmente redondeados */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- ADAPTACIÓN AUTOMÁTICA DE LAS IMÁGENES --- */
+        #seccion-powerparts img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Clave: ajusta la imagen dentro de la caja sin recortarla ni deformarla */
+            transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* --- TÍTULO DEL ACCESORIO --- */
+        #titulo-powerpart {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* --- REUTILIZACIÓN DE ANIMACIONES DE SALIDA Y ENTRADA (Swipe / Carrusel) --- */
+        #seccion-powerparts img.salida-izquierda {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        #seccion-powerparts img.salida-derecha {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        #seccion-powerparts img.entrada-desde-derecha {
+            transition: none;
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        #seccion-powerparts img.entrada-desde-izquierda {
+            transition: none;
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        /* --- 8 PÍLDORAS INDICADORAS --- */
+        #seccion-powerparts .indicadores-carrusel {
+            display: flex;
+            gap:4px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        #seccion-powerparts .indicadores-carrusel span {
+            height: 3px;
+            width: 12px;
+            background-color: var(--color-blanco);
+            border-radius: 100px;
+            transition: all 0.2s ease;
+        }
+
+        #seccion-powerparts .indicadores-carrusel span.indicador-activo {
+            background-color: var(--color-naranja); /* Naranja KTM corporativo */
         }

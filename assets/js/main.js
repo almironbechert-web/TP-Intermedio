@@ -204,3 +204,27 @@ function procesarSwipePowerpart() {
 
 tituloPowerpart.textContent = titulosPowerparts[0];
 actualizarIndicadoresPowerparts();
+
+// ==========================================
+// 3. INTERACCIÓN HERO -> FORMULARIO DE CONTACTO
+// ==========================================
+const btnSolicitarInfo = document.querySelector('#boton-info button');
+const btnTestRide = document.querySelector('#boton-testride button');
+const selectMotivo = document.getElementById('motivo');
+const seccionContacto = document.getElementById('seccion-contacto');
+
+// Si el usuario hace clic en "Solicitar información"
+if (btnSolicitarInfo && selectMotivo && seccionContacto) {
+    btnSolicitarInfo.addEventListener('click', () => {
+        selectMotivo.value = 'financiacion'; // Selecciona "Consulta de financiación"
+        seccionContacto.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+    });
+}
+
+// Si el usuario hace clic en "Book a testride"
+if (btnTestRide && selectMotivo && seccionContacto) {
+    btnTestRide.addEventListener('click', () => {
+        selectMotivo.value = 'prueba'; // Selecciona "Reservar una prueba"
+        seccionContacto.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+    });
+}

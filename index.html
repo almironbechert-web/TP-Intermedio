@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/ktm_logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -105,11 +106,103 @@
     </section>
 
     <section id="seccion-contacto">
+        <div class="contenedor-contacto">
+            
+            <h3>FORMULARIO DE CONTACTO</h3>
+            <p class="subtitulo-contacto">
+                ¡Ya casi está! Envíe sus datos y un distribuidor se pondrá en contacto con usted en breve para tramitar su solicitud.
+            </p>
 
-        <P>SECCIÓN CONTACTO</P>
+            <form id="form-contacto">
+                
+                <!-- 1. Motivo del contacto (Select) -->
+                <div class="grupo-formulario">
+                    <label for="motivo">MOTIVO DEL CONTACTO:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="oferta">Solicitar una oferta</option>
+                        <option value="financiacion">Consulta de financiación</option>
+                        <option value="cita">Hacer una cita</option>
+                        <option value="prueba">Reservar una prueba</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
 
+                <!-- 2. Nombre -->
+                <div class="grupo-formulario">
+                    <label for="nombre">NOMBRE</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+                </div>
+
+                <!-- 3. Apellido -->
+                <div class="grupo-formulario">
+                    <label for="apellido">APELLIDO</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido">
+                </div>
+
+                <!-- 4. Correo electrónico -->
+                <div class="grupo-formulario">
+                    <label for="email">CORREO ELECTRÓNICO</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+
+                <!-- 5. Teléfono -->
+                <div class="grupo-formulario">
+                    <label for="telefono">TELÉFONO INCLUYENDO CÓDIGO DE PAÍS</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Ejemplo: +43 123 456789">
+                </div>
+
+                <!-- 6. Código postal (Opcional) -->
+                <div class="grupo-formulario">
+                    <label for="codigo-postal">CÓDIGO POSTAL (OPCIONAL)</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Ejemplo: 3400">
+                </div>
+
+                <!-- 7. País / Región (Select con ~20 opciones) -->
+                <div class="grupo-formulario">
+                    <label for="pais">PAÍS / REGIÓN:</label>
+                    <select id="pais" name="pais" required>
+                        <option value="" disabled selected>Seleccione su país</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AT">Austria</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CL">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="FR">Francia</option>
+                        <option value="DE">Alemania</option>
+                        <option value="IT">Italia</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="GB">Reino Unido</option>
+                        <option value="CH">Suiza</option>
+                        <option value="PT">Portugal</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                </div>
+
+                <!-- 8. Comentario (<textarea>) -->
+                <div class="grupo-formulario">
+                    <label for="comentario">COMENTARIO (OPCIONAL)</label>
+                    <textarea id="comentario" name="comentario" rows="4" placeholder="Describa brevemente su solicitud para que podamos atender su consulta de la mejor manera posible."></textarea>
+                </div>
+
+                <!-- Controles: Botones de Enviar y Limpiar -->
+                <div class="botones-formulario">
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                    <button type="reset" class="btn-limpiar">LIMPIAR</button>
+                </div>
+
+            </form>
+        </div>
     </section>
 
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
+

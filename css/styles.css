@@ -15,11 +15,21 @@ html, body {
     box-sizing: border-box;
 }
 
+ /* #aaaaaa);
+        padding: 2.5rem 1.25rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        border-top: 0.0625rem solid #222222; */
+
 :root {
     --color-negro: #1D1D1D;
     --color-negro-1:#242424;
+    --color-negro-2: #121212;
+    --color-negro-3: #222222;
     --color-gris: #676767;
     --color-gris-1:#3f3f3f;
+    --color-gris-2:#aaaaaa;
     --color-blanco: #FFFFFF;
     --color-naranja: #FF6600;
 }
@@ -264,16 +274,16 @@ body {
 
         /* --- LA CAJA BLANCA CONTENEDORA --- */
         #seccion-powerparts .contenedor-imagen {
-            background-color: var(--color-blanco); /* Fondo blanco pedido */
+            background-color: var(--color-blanco);
             width: 100%;
-            max-width: 300px; /* Ancho máximo de la caja */
-            height: 300px; /* Alto fijo para mantener formato cuadrado perfecto */
+            max-width: 300px;
+            height: 300px;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px; /* Margen interno para que la pieza no pegue contra los bordes */
-            border-radius: 8px; /* Bordes sutilmente redondeados */
+            padding: 20px;
+            border-radius: 8px;
             overflow: hidden;
             position: relative;
         }
@@ -282,7 +292,7 @@ body {
         #seccion-powerparts img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Clave: ajusta la imagen dentro de la caja sin recortarla ni deformarla */
+            object-fit: contain;
             transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
             transform: translateX(0);
             opacity: 1;
@@ -338,7 +348,7 @@ body {
         }
 
         #seccion-powerparts .indicadores-carrusel span.indicador-activo {
-            background-color: var(--color-naranja); /* Naranja KTM corporativo */
+            background-color: var(--color-naranja);
         }
 
  /* SECCIÓN 4 - FORMULARIO DE CONTACTO */
@@ -374,7 +384,7 @@ body {
         font-size: smaller;
         font-weight: 300;
         /* text-align: center; */
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 1.4;
     }
 
@@ -475,3 +485,113 @@ body {
         border-color: var(--color-naranja);
     }
     
+    /* Estado oculto del mensaje */
+    .mensaje-exito-oculto {
+        display: none;
+    }
+
+    /* Estado visible con animación de entrada */
+    .mensaje-exito-visible {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        margin-top: 20px;
+        background-color: var(--color-negro);
+        border: 1px solid var(--color-naranja);
+        border-radius: 4px;
+        text-align: center;
+        box-sizing: border-box;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .mensaje-exito-visible h4 {
+        color: var(--color-naranja);
+        font-weight: 800;
+        font-size: medium;
+        margin: 0 0 10px 0;
+    }
+
+    .mensaje-exito-visible p {
+        font-size: smaller;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+/* FOOTER */
+
+    #seccion-footer {
+        width: 100%;
+        background-color: var(--color-negro-2);
+        color: var(--color-gris);
+        padding: 2.5rem 1.25rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        border-top: 0.0625rem solid var(--color-negro);
+    }
+
+    .contenedor-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .footer-iconos {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .footer-iconos a {
+        color: var(--color-blanco);
+        background-color: var(--color-negro-3);
+        padding: 0.75rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .icono-svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .footer-iconos a:hover {
+        background-color: var(--color-naranja);
+        color: var(--color-blanco);
+    }
+
+    .footer-legal {
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: var(--color-gris);
+        margin: 0;
+        line-height: 1.5;
+        max-width: 35rem;
+    }
+
+    .footer-legal a {
+        color: var(--color-naranja);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+        text-decoration: underline;
+    }

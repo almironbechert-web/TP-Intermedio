@@ -228,3 +228,27 @@ if (btnTestRide && selectMotivo && seccionContacto) {
         seccionContacto.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
     });
 }
+
+// ==========================================
+// 4. MANEJO DEL ENVÍO DEL FORMULARIO
+// ==========================================
+const formContacto = document.getElementById('form-contacto');
+const mensajeExito = document.getElementById('mensaje-exito');
+
+if (formContacto && mensajeExito) {
+    formContacto.addEventListener('submit', (e) => {
+        // 1. Evitamos que la página se recargue
+        e.preventDefault();
+
+        // 2. Ocultamos el formulario y mostramos el mensaje de éxito
+        formContacto.style.display = 'none';
+        mensajeExito.classList.remove('mensaje-exito-oculto');
+        mensajeExito.classList.add('mensaje-exito-visible');
+
+        // 3. Opcional: Desplazar suavemente hacia el mensaje para asegurar que se vea
+        mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // 4. Limpiamos los campos por si el usuario vuelve a habilitar el form
+        formContacto.reset();
+    });
+}
